@@ -69,6 +69,9 @@
 
 > Check row["Minus"] == null || row["Minus"] == DBNull.Value to prevent the error
 
+ - row["Minus"] == null is the value for Minus is null
+ - row["DBNull.Value"] is the row is not exist mean empty data
+
 # Convert
 
 Use `Convert.ToDecimal(row["Minus"])`  instead of `(Decimal)row["Minus"]` for numeric datatype to prevent error.
@@ -80,3 +83,11 @@ For example, Numeric datatype
     
 But If `row["Name"]` datatype is string so we can use `(string)row["Name"]` to convert the string because string is nullable.
 
+### BigInt type convert to Int64
+
+For example: 
+If `row["Id"]` datatype in database table is `bigint`, using Convert.ToInt64(row["Id"]) to convert it to int and make sure using Int64 datatype in C# 
+
+    Int64 PartId = Convert.ToInt64(row["Id"]);
+
+If Convert `bigint` in to `Int32/Int16` will occur error.
