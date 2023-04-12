@@ -1,6 +1,6 @@
 # ExecuteSQL
 
-##  GetDTDetails, GetDT
+###  GetDTDetails, GetDT
 
  - Return datatable if successful execute and return null if
    unsuccessful execute
@@ -22,7 +22,7 @@
     // do something if table is empty no data row no column
     }
 
-##  GetSingledata
+###  GetSingledata
 
  - Return a single object if not null.
  - Return null if object is null.
@@ -38,7 +38,7 @@
      qty = Quantity == null ? 0.00m : Convert.ToDecimal(Quantity);
 
 # Data Row Validation and Convert
-## Example Code for  Convert datatype for Data Row 
+### Example Code for  Convert datatype for Data Row 
     DataTable  NewTolorences = ExecuteSQL.GetDT("query")
     
     // check if datatable is not null and row count is more than 0
