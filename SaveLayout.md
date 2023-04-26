@@ -108,4 +108,4 @@ Right Click on any column on the gridView and click Save Layout
 
 ## What next can improve?
 1) Allow user restore to default layout and the saved layout will be delete
-2) In Form cs should using more less coding to apply the save layout function
+2) In Form cs should using less code to apply the save layout function
