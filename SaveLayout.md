@@ -70,7 +70,7 @@
 ## Step 2 : Custom Menu bar add "Save Layout' Button in your Form cs file & 	  Save Layout click event
 ```cs
         GridView RightClickOnGridView;
-        private void gridView1_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
+        private void gridView_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
         {
             // Check if the right-click was on a column header
             if (e.MenuType == DevExpress.XtraGrid.Views.Grid.GridMenuType.Column)
