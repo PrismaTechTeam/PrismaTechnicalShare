@@ -75,7 +75,7 @@
 
 # Convert
 
-Use ```cs Convert.ToDecimal(row["Minus"]) ```  instead of `(Decimal)row["Minus"]` for numeric datatype to prevent error.
+Use ```Convert.ToDecimal(row["Minus"]) ```  instead of `(Decimal)row["Minus"]` for numeric datatype to prevent error.
 For example, Numeric datatype
 ```cs
     int Less= Convert.ToInt32(row["Less"]);
