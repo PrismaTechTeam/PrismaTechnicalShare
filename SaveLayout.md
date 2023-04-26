@@ -68,7 +68,7 @@
 ```
 
 ## Step 2 : Custom Menu bar add "Save Layout' Button in your Form cs file & 	  Save Layout click event
-
+```cs
         GridView RightClickOnGridView;
         private void gridView1_PopupMenuShowing(object sender, PopupMenuShowingEventArgs e)
         {
@@ -87,10 +87,11 @@
         {
             GridViewLayoutManager.SaveLayout(this.Name, RightClickOnGridView);
         }
-	
+```	
 After Copy paste this code to your form cs file, go to designer > properties > choose gridiview > Event (yellow thunder icon) > find `PopupMenuShowing` > drop down choose `gridView_PopupMenuShowing`
  
 ## Step 4: Load Layout 
+```cs
       private void LoadData()
       {
       .
@@ -98,6 +99,7 @@ After Copy paste this code to your form cs file, go to designer > properties > c
        gridControl1.DataSource = ExecuteSQL.GetDTDetails(query2, $"{txtEmployeeID.EditValue}");
        GridViewLayoutManager.RestoreLayout(this.Name, gridView1);
       }
+```
   Put `GridViewLayoutManager.RestoreLayout(this.Name, gridView1);` under where you load the data source for gridview/gridcontrol. 
 
     RestoreLayout(this.Name, PutYourGridView); 
