@@ -107,4 +107,4 @@ After Copy paste this code to your form cs file, go to designer > properties > c
 Right Click on any column on the gridView and click Save Layout
 
 ## What next can improve?
-1) Allow user to restore to default layout
+1) Allow user restore to default layout and the saved layout will be delete
