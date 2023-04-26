@@ -1,7 +1,7 @@
 # Grid View Save Layout
 
 ## Step 1: Import GridViewLayoutManager.cs in your project
-
+```cs
     using DevExpress.XtraGrid.Views.Grid;
 	using System;
 	using System.IO;
@@ -65,7 +65,7 @@
  
     }
 	}
-
+```
 
 ## Step 2 : Custom Menu bar add "Save Layout' Button in your Form cs file & 	  Save Layout click event
 
@@ -110,6 +110,4 @@ Right Click on any column on the gridView and click Save Layout
 1) Allow user restore to default layout and the saved layout will be delete
 2) In Form cs should using less code to apply the save layout function
 3) Need Prevent Duplicate Layout file name (.xml)
-```cs
-    using DevExpress.XtraGrid.Views.Grid;
-```
+
