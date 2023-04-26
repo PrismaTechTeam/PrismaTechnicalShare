@@ -102,3 +102,9 @@ After Copy paste this code to your form cs file, go to designer > properties > c
 
     RestoreLayout(this.Name, PutYourGridView); 
    Change `PutYourGridView` to whatever gridview that you want
+
+## How to save
+Right Click on any column on the gridView and click Save Layout
+
+## What next can improve?
+1) Allow user to restore to default layout
