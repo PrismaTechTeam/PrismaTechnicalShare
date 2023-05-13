@@ -113,10 +113,13 @@ public DataSet[] PaySlip(){
    if (dataRow != null)
    {
        DataTable ListofEmployeeID = LoadEmployee(Int32.Parse(dataRow[2].ToString()), Int32.Parse(dataRow[3].ToString()));
+       
+       // declare and assign size for datasets array
        DataSet[] dataSets = new DataSet[ListofEmployeeID.Rows.Count];
-
+	
        for (int i = 0; i < ListofEmployeeID.Rows.Count; ++i)
        {
+       	   // Custom own datatable for report datasouc
            int EmpID = Int32.Parse(ListofEmployeeID.Rows[i]["ID"].ToString());
            DataTable Data = executeSQL.GetDTDetails(mydb, PyrlSQL.PyrlSQLType.GetEmployeeData, EmpID);
            Data.TableName = "Employee Info";
@@ -129,7 +132,8 @@ public DataSet[] PaySlip(){
            Data4.TableName = "Payroll Basic Info";
            DataTable Data3 = executeSQL.GetDTDetails(mydb, PyrlSQL.PyrlSQLType.PayrollReportByEmployee, Int32.Parse(dataRow[2].ToString()), Int32.Parse(dataRow[3].ToString()), EmpID);
            Data3.TableName = "Payroll";
-
+	   
+           // Add a dataset in dataSets array (Important)
            dataSets[i] = FillDataset("EmployeePackage", Data, Data2, Data3, Data4);
        }
        return dataSets;
