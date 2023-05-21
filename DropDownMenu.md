@@ -92,7 +92,7 @@
 
 **Step 4:** Enable the dropdown effect
 ```html
- <script  src="../assets/libs/jquery/dist/jquery.min.js"></script>
+<script  src="../assets/libs/jquery/dist/jquery.min.js"></script>
 <script>
 
 	$(document).ready(function () {
