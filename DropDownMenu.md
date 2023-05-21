@@ -42,7 +42,7 @@
 ```
 
 **Step 3:** Add your custom sidebar-item
-````html
+```html
 <li  class="sidebar-item dropdown-parent">
 	<div
 		class="sidebar-link d-flex align-items-center"
