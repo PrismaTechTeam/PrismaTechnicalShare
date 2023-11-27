@@ -8,7 +8,7 @@
 3. Navigate to src → dashboards → modern → TopCard.tsx.
 4. Copy the following code block:
     
-    tsx
+    ```tsx
     {
         href: /apps/workcentre,
         icon: icon 1,
@@ -16,7 +16,7 @@
         digit: 5,
         bgcolor: info
     }
-    
+    ```
     
     
     Paste the copied code block and change the href to /apps/UOM and title to ‘UOM’.
@@ -29,16 +29,16 @@
 10. Get the link from GET API /api/UOM/count and replace the URL in the fetch statement. Change the setCount statement to setUOMCount.
 11. Copy one of the lines for the state:
     
-    tsx
+    ```tsx
     const [jobOrderCount, setJobOrderCount] = useState<number | null>(null);
-    
+    ```
     
     
     Paste it and change to:
     
-    tsx
+    ```tsx
     const [UOMCount, setUOMCount] = useState<number | null>(null);
-    
+    ```
     
     
 12. Copy one of the if statements in const updatedTopCard (below the fetch statement). Change the href to ‘../views/apps/UOM/Uom’ && UOMCount.
@@ -65,29 +65,29 @@
 23. Navigate to src → types → apps and create a new file named uom.ts.
 24. Insert the following code block into uom.ts:
     
-    tsx
+    ```tsx
     export interface UOMType {
         id: number;
         uom: string;
         type: string;
     }
-    
+    ```
     
     
 25. In UOMTableList, import fetchUOM from the UOMSlice.
 26. In UOMTableList, in headCells change id and label to Id, Id & UOM, UOM & Type, Type.
 27. In UOMTableList, at //FetchProduct dispatch(fetchUOM()) change to fetchUOM. Below:
     
-    tsx
+    ```tsx
     const getDepartment: DepartmentType[] = useSelector((state) => state.departmentReducer.department);
-    
+    ```
     
     
     Change to:
     
-    tsx
+    ```tsx
     const getUOM: UOMType[] = useSelector((state) => state.uomReducer.uom);
-    
+    ```
     
     
 28. In UOMTableList, in React.useEffect, set rows change the parameter from getDepartment to getUOM.
